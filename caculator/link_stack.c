@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <malloc.h>
 #include <assert.h>
+#include <string.h>
 
 
 Stack* create_stack(size_t data_byte) {
