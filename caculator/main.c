@@ -5,7 +5,7 @@
 
 int main()
 {
-    char *infix_exp;
+    char infix_exp[100];
     while(scanf("%s", infix_exp) > 0) {
         printf("Result is: %d\n",caculator(transfer_exp(infix_exp)));
     }

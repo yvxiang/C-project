@@ -31,6 +31,7 @@ int get_priority(char operator) {
 ** transfer infix expression to suffix expression
 */
 char * transfer_exp(char *infix_exp) {
+    assert(infix_exp != NULL);
     int index = 0;
     char* ptr = infix_exp;
     Stack *pst = create_stack(sizeof(char));
@@ -79,7 +80,8 @@ char * transfer_exp(char *infix_exp) {
 }
 
 int caculator(const char * suffix_exp) {
-    char * ptr = suffix_exp;
+    assert(suffix_exp != NULL);
+    const char * ptr = suffix_exp;
     char data_exp[20]; // store the digit expression
     Stack *pst = create_stack(sizeof(int));
     while (*ptr != '\0') {
